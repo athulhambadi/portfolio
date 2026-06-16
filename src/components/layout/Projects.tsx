@@ -50,7 +50,7 @@ export default function Projects() {
         transition={{ duration: 0.8 }}
         className="mb-16"
       >
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Selected Works</h2>
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Projects</h2>
         <div className="h-px w-full bg-zinc-800" />
       </motion.div>
 

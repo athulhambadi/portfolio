@@ -12,7 +12,7 @@ const projectData = {
   title: "Tiju’s Academy",
   category: "AI Content Creation & Performance Marketing",
   year: "2024–2026",
-  role: "Creative Strategist / AI Content Researcher",
+  role: "Creative Strategist/AI Content Creator",
   tools: [
     "Midjourney", "ChatGPT", "Claude", "Veo3", "Seedance", 
     "Runway", "Canva", "After Effects", "Premiere Pro"
