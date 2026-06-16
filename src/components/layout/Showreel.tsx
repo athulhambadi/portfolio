@@ -11,8 +11,8 @@ export default function Showreel() {
   const handleMouseEnter = () => {
     if (iframeRef.current && iframeRef.current.contentWindow) {
       iframeRef.current.contentWindow.postMessage('{"method":"play"}', '*');
-      // Set volume based on user's selected state. Browsers require 0 volume for hover-autoplay if no click has happened yet.
       iframeRef.current.contentWindow.postMessage(`{"method":"setVolume", "value": ${isUnmuted ? 1 : 0}}`, '*');
+      iframeRef.current.contentWindow.postMessage(`{"method":"setMuted", "value": ${!isUnmuted}}`, '*');
     }
   };
 
@@ -27,6 +27,7 @@ export default function Showreel() {
       const newState = !isUnmuted;
       setIsUnmuted(newState);
       iframeRef.current.contentWindow.postMessage(`{"method":"setVolume", "value": ${newState ? 1 : 0}}`, '*');
+      iframeRef.current.contentWindow.postMessage(`{"method":"setMuted", "value": ${!newState}}`, '*');
     }
   };
 
