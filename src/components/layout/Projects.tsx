@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 
 const projects = [
@@ -64,7 +62,7 @@ export default function Projects() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group relative cursor-pointer"
           >
-            <Link href={`/work/${project.id}`} className="block">
+            <div className="block">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <div className="md:col-span-7 relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-white/5">
                   <Image 
@@ -88,30 +86,13 @@ export default function Projects() {
                   <p className="text-zinc-400 text-lg font-light leading-relaxed mb-8">
                     {project.summary}
                   </p>
-                  <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-widest group-hover:text-accent transition-colors duration-300">
-                    View Project 
-                    <div className="w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-black transition-all duration-300">
-                      <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform duration-300" />
-                    </div>
-                  </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </motion.div>
         ))}
       </div>
       
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="mt-24 flex justify-center"
-      >
-        <Link href="/work" className="px-8 py-4 border border-zinc-700 rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
-          View All Projects
-        </Link>
-      </motion.div>
     </section>
   );
 }

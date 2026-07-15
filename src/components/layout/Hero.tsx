@@ -84,7 +84,7 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <MagneticButton href="/work">
+            <MagneticButton href="#work">
               <span className="px-8 py-4 bg-white text-black rounded-full font-semibold text-sm uppercase tracking-widest hover:bg-zinc-200 transition-colors inline-block">
                 View Work
               </span>
